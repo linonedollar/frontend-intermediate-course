@@ -1,0 +1,12 @@
+$font-family: Heiti TC,微軟正黑體
+
+@mixin clearfix()
+    &:before,&:after
+        content: ""
+        display: table
+    &:after
+        clear: both
+        
+@mixin size($width,$height)
+	width: $width
+	height: $height
