@@ -9,9 +9,7 @@ var channeldata = JSON.parse(xhr.responseText)
 
 function showdata(){
 	for(var i = 0; i < channeldata.streams.length; i++){
-		var div = document.createElement("div");
 		channelHTML = '';
-		channelHTML += '<div class="col">';
 		channelHTML += '	<div class="channel-video">';
 		channelHTML += '		<img src="'+channeldata.streams[i].preview.medium+'" alt=""></img>';
 		channelHTML += '	</div>';
@@ -24,7 +22,8 @@ function showdata(){
 		channelHTML += '			<div class="owner_name">'+channeldata.streams[i].channel.name+'</div>';
 		channelHTML += '		</div>';
 		channelHTML += '	</div>';
-		channelHTML += '</div>';
+		var div = document.createElement("div");
+		div.className = "col";
 		div.innerHTML = channelHTML;
 		row.append(div);
 	}
