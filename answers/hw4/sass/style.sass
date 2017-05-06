@@ -1,0 +1,68 @@
+@import reset
+@import mixin
+
+html
+	font-family: $font-family
+	font-size: 14px
+a
+	text-decoration: none
+body
+	background-image: url("../images/bg-default.jpg")
+	background-attachment: fixed
+.container
+	@include size(100%,100vh)
+	height: 100%
+	background: rgba(0, 0, 0, .5)
+	padding-top: 30px
+
+.row
+	width: 1000px
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+
+.col
+	width: 300px
+	display: inline-block
+	margin-bottom: 30px
+	border: 1px solid rgba(0, 0, 0, .3)
+	transition: all 0.3s
+	&:hover
+		filter: brightness(1.5)
+		box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3)
+
+.cover
+	border: 0px
+	&:hover
+		box-shadow: 0px 0px 0px 0px rgba(0,0,0,0)
+
+.channel-video img
+	width: 100%
+	vertical-align: bottom
+
+.channel-info
+	background-color: rgba(0, 0, 0, .5)
+	padding: 10px
+	position: relative
+	display: flex
+	align-items: center
+
+.avatar
+	width: 50px
+	height: 50px
+	overflow: hidden
+	border-radius: 50%
+	margin-right: 10px
+	img
+		width: 100%;
+
+.intro
+	color: white
+
+.channel_name , .owner_name
+	white-space: nowrap
+	text-overflow: ellipsis
+	overflow: hidden
+	width: 210px
+	line-height: 25px
